@@ -21,14 +21,10 @@ function loadContenu(type){
 				$('#ContenuPrincipal').append("<div id='HeaderAccueil'><h1>Realisation et mise en volume de vos projets</h1></div>");
 				break;
 			case "el_ex":
-				var el_ex_elt = filterByType("el_ex",headers,paramLines);
-				constructMenu(el_ex_elt,"el_ex");
-				
-				break;
 			case "ac_br":
-				var ac_br_elt = filterByType("ac_br",headers,paramLines);
-				constructMenu(ac_br_elt,"ac_br");
-				
+				var el_ex_elt = filterByType(type,headers,paramLines);
+				constructMenu(el_ex_elt,type);
+								
 				break;
 				
 			case "clients":
