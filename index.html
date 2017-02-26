@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<TITLE>Atelier Veroliv</TITLE>
+<!-- Atelier Veroliv 2016 -->
+<meta charset="utf-8" ></code>
+<meta name="keywords" content="décors, trucages, factices, accessoires, costumes, maquettes, prototypes, expositions, modelmaker, atelier, volume, muséographie, veroliv, stand, vitrine, décoration, résine, moulage, matière, salon, braille, composite, platre, animation, publicit&eacute;, masque, théatre, cinéma">
+<meta name="Author" content="TAUSSIG,VEROLIV">
+ <!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<script src="js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.26633.js"></script>
+<script type="text/javascript" src="js/jquery.gridrotator.js"></script>
+<link href="http://db.onlinewebfonts.com/c/d6ad46001a481e292c57d2981ab4e615?family=Hasteristico" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="css/veroliv_site.css">
+<script src="CONFIG.js"></script>
+<script src="js/fonctions.js"></script>
+</head>
+<body onload=initSite()>
+<div id="SiteContent">
+	<div id="PanneauLat">
+		<div><img src="asset/logoVV.PNG" alt="Atelier VeroliV"></div>
+		<div id="menuLat" class="list-group">
+			<a href="#" id="Accueil" onclick="loadContenu('accueil')" class="list-group-item menu">Accueil</a>
+			<a href="#" id="vide" class="list-group-item menu"></a>
+			<a href="#collapseReal" id="Realisation" data-toggle="collapse" class="list-group-item menu">Réalisations</a>
+				<div id="collapseReal" class="panel-collapse collapse">
+					<ul class="list-group">
+					  <li class="list-group-item real" onclick="loadContenu('el_ex')"><img class="puceMenu">élément d'exposition</li>
+					  <li class="list-group-item real"><img class="puceMenu">maquette</li>
+					  <li class="list-group-item real"><img class="puceMenu">accessiblité, braille</li>
+					  <li class="list-group-item real"><img class="puceMenu">mécanisme</li>
+					  <li class="list-group-item real"><img class="puceMenu">accessoire, mode</li>
+					  <li class="list-group-item real"><img class="puceMenu">sculpture</li>
+					  <li class="list-group-item real"><img class="puceMenu">décor</li>
+					  <li class="list-group-item real"><img class="puceMenu">autres productions</li>
+					</ul>
+				</div>
+			<a href="#" class="list-group-item menu" onclick="loadContenu('clients')" >Clients</a>
+			<a href="#" class="list-group-item menu">L'atelier</a>
+			<a href="#" class="list-group-item menu">Partenaires</a>
+			<a href="#" class="list-group-item menu"></a>
+			<a href="#" onclick="loadContenu('contacts')" class="list-group-item menu">Contacts</a>
+			<!-- <div id="Realisation" class="Menu" href="#"><h1>Réalisations</h1>
+				<div><div class="listeMenu"></div><h2>élément d'exposition</h2></div>
+				<div class="listeMenu"><h2>maquette</h2></div>
+				<div class="listeMenu"><h2>accessibilité</h2></div>
+				<div class="listeMenu"><h2>mécanisme</h2></div>
+				<div class="listeMenu"><h2>élément d'exposition</h2></div>
+			</div> -->
+		</div>
+	</div>
+	<div id="ContenuPrincipal"></div>
+</div>
+<footer>
+<p>Olivier Taussig    5 rue de la Dhuis  75020 Paris    tél : 01 43 64 97 79     contact@atelierveroliv.fr</p>
+</footer>
+</body>
+
+<html>

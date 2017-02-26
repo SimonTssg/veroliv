@@ -1,0 +1,17 @@
+nomCourt;type;client;ville/lieu;option;nom/expo;photoP;dosPhoto;Scéno/design;description
+Cap;el_ex;Palais de l'univers;Cappelle - Dunkerque;en groupement avec À Première Vue;Exposition permanente;el_ex_1.jpg;CapPhoto;Scénographie ASA Sompairac;Manipulations, mécanisme et objets
+Eco;el_ex;Cité des sciences et de l'industrie;Paris;en groupement avec À Première Vue;Exposition : Economie;el_ex_2.jpg;EcoPhoto;Scénographie Les crayons;Mobiliers et manipulations interactives
+Omb;el_ex;Cité des sciences et de l'industrie;Paris;en groupement avec À Première Vue;Exposition : Ombres;el_ex_3.jpg;OmbPhoto;Design B. Bureau & F. Cornilleau;Mobiliers et manipulations interactives
+Ren;el_ex;Les Champs Libres;Rennes;;Le Laboratoire de Merlin;el_ex_4.jpg;RenPhoto;Scénographie Proxima du centaure;Conception et réalisatio des manipulations interactives
+Jeu;el_ex;Cité des sciences et de l'industrie;Paris;en groupement avec Atelier Dexet;Exposition : Jeux sur Je;el_ex_5.jpg;JeuPhoto;;Mobiliers et accessoires des jeux
+Fou;el_ex;Palais de la Découverte;Paris;;Exposition : Fourmis;el_ex_6.jpg;FouPhoto;;Vivariums, circulations et dioramas
+Bap;el_ex;Cité des sciences et de l'industrie;Paris;;Exposition : Bon appetit;el_ex_7.jpg;BapPhoto;Design C. Farrel & P. Viala;Mécanismes interactifs, mobiliers et sculptures
+San;el_ex;Maison des Sancerre;Sancerre;en groupement avec Atelier Dexet;Exposition permanente;el_ex_8.jpg;SanPhoto;Scénographie Créatime;Mobiliers, présentations et manipulations interactives
+Vig;el_ex;Marais du Vigueirat;Camargue;;sentier ludopédagogique;el_ex_9.jpg;VigPhoto;Jeux et manipulations interactives;Mobiliers, sculptures, illustrations et mécanismes
+Ant;el_ex;Parc d'Aventures Scientifiques;Frameries - Belgique;;Exposition : Antarctique;el_ex_10.jpg;AntPhoto;Scénographie Eric Verrier;cartographies, mappemondes et manipulations
+Cor;el_ex;Parc d'Aventures Scientifiques;Frameries - Belgique;;Exposition : Mon corps, ma santé;el_ex_11.jpg;CorPhoto;Scénographie Klapish-Claisse;Sculpture, leds et programme électronique
+Lor;el_ex;Cité de la Voile - Eric Tabarly;Lorient;en groupement avec À Première Vue;Exposition permanente;el_ex_12.jpg;LorPhoto;Scénographie Pierre Verger;Manipulations et mécanismes
+Din;el_ex;Institut Royal de Sciences Naturelles;Bruxelles;en groupement avec À Première Vue et Atelier Dexet;Nouvelle galerie des dinosaures;el_ex_13.jpg;DinPhoto;;Mécanismes, dioramas, sculptures et manipulations
+Eug;el_ex;Cité des sciences et de l'industrie;pour la Fondation Eugenides;;à Athènes;el_ex_14.jpg;EugPhoto;;Manipulations interactives, mécanismes et présentation d'objets
+Tit;el_ex;Cité des sciences et de l'industrie;Paris;en groupement avec Atelier Dexet;Sexualité - Titeuf;el_ex_15.jpg;TitPhoto;;Sculptures, mécanismes et mobiliers
+Eau;el_ex;Site archéologique de la Domus;Eauze - Gers;en groupement avec À Première Vue;Exposition permanente;el_ex_16.jpg;EauPhoto;Scénographie Maskarade;Manipulations interactives et objets factices

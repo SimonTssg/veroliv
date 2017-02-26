@@ -1,0 +1,503 @@
+@import url(http://db.onlinewebfonts.com/c/d6ad46001a481e292c57d2981ab4e615?family=Hasteristico);
+@font-face {font-family: "Hasteristico";
+    src: url("http://db.onlinewebfonts.com/t/d6ad46001a481e292c57d2981ab4e615.eot");
+    src: url("http://db.onlinewebfonts.com/t/d6ad46001a481e292c57d2981ab4e615.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/d6ad46001a481e292c57d2981ab4e615.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/d6ad46001a481e292c57d2981ab4e615.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/d6ad46001a481e292c57d2981ab4e615.svg#Hasteristico") format("svg");
+}
+html{
+	margin:2px;
+}
+body{
+	height:100%;
+	width:100%;
+	overflow: hidden;
+}
+#SiteContent{
+	display:inline-block;
+	height:100%;
+	width:100%;
+}
+#PanneauLat{
+	height:100vh;
+	/* width:270px; */
+	background-repeat: no-repeat;
+	background-image: url("../asset/fondMenu.png");
+	display:inline-block;
+}
+#PanneauLat >img{
+	width:100%;
+}
+#ContenuPrincipal{
+	display:inline-block;
+	height:100%;
+	position: fixed;
+	top:0px;
+	overflow: scroll;
+	width:100%;
+}
+h1{
+	font-family: "Hasteristico";
+	font-weight: bold;
+	font-size: 30px;
+	color:red;
+	text-align:center;
+	width:100%;
+}
+#HeaderAccueil{
+	background: url("../asset/accueilBackground.png");
+	background-repeat: no-repeat;
+	width:100%;
+	height:100%;
+}
+#HeaderAccueil h1{
+	font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;
+	font-size: 40px;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: uppercase;
+	font-weight: 500;
+	line-height: 26.4px;
+	color:#6DC5A7;
+	text-shadow: 1.5px 1.5px grey;
+}
+.puceMenu{
+	content: url("../asset/liste.gif");
+	width: auto; 
+	height: auto; 
+	margin: 0;
+	padding: 0;
+	margin-right:3px;
+}
+.menu{
+	border:0px;
+	color:red !important;
+	padding:4px;
+	font-family: "Hasteristico";
+	font-weight: bold;
+	font-size: 25px;
+}
+.list-group li{
+	font-family: "Hasteristico";
+	font-weight: bold;
+	font-size: 20px;
+}
+.list-group-item{
+	background-color:transparent;
+	border:0px;
+	padding:3px;
+}
+.list-group-item:hover{
+	cursor:pointer;
+	background-color:transparent;
+}
+.grid-item,
+.grid-sizer {
+  width: 250px;
+}
+.grid-sizer-elx,
+.grid-item-elx{
+  width: 220px;
+}
+
+.grid-item{
+  float: left;
+}
+
+.grid-item-elx {
+  float: left;
+  margin: 10px;
+}
+
+.grid-item img, .grid-item-elx img{
+  display: block;
+  max-width: 100%;
+}
+.col-lg-2 {
+    width: 16%;
+}
+.thumb {
+    padding:0px;
+}
+.firstrow >div{
+	vertical-align: baseline;
+}
+.selected{
+	width:200px;
+	height: auto;
+}
+.hover-info{
+	display:none;
+	background-color:rgb(200,200,200);
+	opacity:0.8;
+	position:absolute;
+	bottom:0;
+	z-index:10;
+	height:50%;
+	margin:5px;
+	width:200px;
+}
+.vis{
+	display:block;
+}
+.MoreInfo{
+	font-style: italic;
+}
+.MoreInfo:hover{
+	cursor:pointer;
+}
+.InfoElEx{
+	margin: 10px;
+	position:absolute;
+	right: 10%;
+    top: 5px;
+	text-align:right;
+	width:40%;
+	font-family: "Hasteristico";
+	font-weight: bold;
+	font-size: 17px;
+}
+.ElExInfoHeader{
+	font-size: 20px;
+}
+#mySlider{
+	top:0;
+	right:0;
+	position:absolute !important;
+	display:none;
+	width:100%;
+	height:100%;
+	background-color: rgba(142, 137, 137, 0.9);
+}
+.grp{
+	font-size: 10px;
+	font-style: italic;
+	font-weight: normal;
+}
+footer{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	left:270px;
+	font-family: "Hasteristico";
+	font-weight: bold;
+	font-size: 20px;
+	background-color:#FFFFFF;
+}
+.view {
+    width: 100%;
+    height:100%;
+    margin: 10px;
+    float: left;
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+    background: #fff url(../images/bgimg.jpg) no-repeat center center
+}
+.view .mask, .view .content {
+    width: 100%;
+    height:100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+.view img {
+    display: block;
+    position: relative
+}
+.view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0
+}
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center
+}
+.view a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000
+}
+.view a.info:hover {
+    box-shadow: 0 0 5px #000
+}.view-sixth img { 
+	transition: all 0.4s ease-in-out 0.5s; 
+}
+.view-sixth .mask{ 
+	background-color: rgba(142, 137, 137, 0.5);
+	opacity:0;
+	transition: all 0.3s ease-in 0.4s;
+}
+.view-sixth h2{
+	opacity:0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: transparent;
+    margin: 20px 40px 0px 40px;
+    transform: scale(10);
+    transition: all 0.3s ease-in-out 0.1s;
+}
+.view-sixth p { 
+	opacity:0;
+    transform: scale(10);
+	transition: all 0.3s ease-in-out 0.2s;
+}
+.view-sixth a.info { 
+	opacity:0;
+    transform: translateY(100px);
+	transition: all 0.3s ease-in-out 0.1s;
+}
+
+.view-sixth:hover .mask {  
+	opacity:1; 
+	transition-delay: 0s;
+}																			 
+.view-sixth:hover img { 
+	transition-delay: 0s; 
+}
+.view-sixth:hover h2 { 
+	opacity: 1;
+    transform: scale(1);
+	transition-delay: 0.1s;
+}
+.view-sixth:hover p { 
+	opacity:1; 
+    transform: scale(1);
+	transition-delay: 0.2s;
+}
+.view-sixth:hover a.info { 
+	opacity:1;
+    transform: translateY(0px);
+	transition-delay: 0.3s;
+}
+.item img, .item video{
+	width: 70%;
+    margin: auto;
+	padding-top: 10px;
+}
+#closeBtn{
+	display:none;
+	position:absolute;
+	z-index:1000;
+	width:20px;
+	height:20px;	
+	color:black;
+	cursor:pointer;
+	background-color:white;
+	border-radius:4px;
+	top:20px;
+	right:15px;
+	padding-left: 4px;
+}
+#closeBtn:hover{
+	text-shadow: 2px 2px 2px rgba(100, 100, 100, 1);
+}
+.ri-grid{
+	width: 600px;
+}
+
+.ri-grid ul li,
+.ri-grid ul li a{
+	width: 100px;
+	height: 100px;
+}
+.ri-grid ul li a img{
+	width: 100%;
+}
+.ri-grid{
+	margin: 20px auto 20px;
+	position: relative;
+	height: auto;
+}
+
+.ri-grid ul {
+	list-style: none;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/* Clear floats by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+
+.ri-grid ul:before,
+.ri-grid ul:after{
+	content: '';
+    display: table;
+}
+
+.ri-grid ul:after {
+    clear: both;
+}
+
+.ri-grid ul {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+} 
+
+.ri-grid ul li {
+	-webkit-perspective: 400px;
+	-moz-perspective: 400px;
+	-o-perspective: 400px;
+	-ms-perspective: 400px;
+	perspective: 400px;	
+	margin: 0;
+	padding: 0;
+	float: left;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	background: #000;
+}
+
+.ri-grid ul li a{
+	display: block;
+	outline: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: #333;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+/* Grid wrapper sizes */
+.ri-grid-size-1{
+	width: 90%;
+}
+
+
+/* Shadow style */
+.ri-shadow:after,
+.ri-shadow:before{
+	content: "";
+	position: absolute;
+	z-index: -2;
+	bottom: 15px;
+	left: 10px;
+	width: 50%;
+	height: 20%;
+	max-width: 300px;
+	max-height: 100px;
+	box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+}
+.ri-shadow:after{
+	right: 10px;
+	left: auto;
+	-webkit-transform: rotate(3deg);
+	-moz-transform: rotate(3deg);
+	-ms-transform: rotate(3deg);
+	-o-transform: rotate(3deg);
+	transform: rotate(3deg);
+}
+
+.ri-grid-loading:after,
+.ri-grid-loading:before{
+	display: none;
+}
+
+.ri-loading-image{
+	display: none;
+}
+
+.ri-grid-loading .ri-loading-image{
+	position: relative;
+	width: 40px;
+	height: 40px;
+	left: 50%;
+	margin: 100px 0 0 -15px;
+	display: block;
+}
+.ElExInfoOpt{
+	font-size:10px;
+	text-align:right;
+}
+
+.clientGrid a {
+  font-size: 16px;
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(40% - 4px);
+  margin-right: 8px;
+}
+
+.clientGrid a:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 50em) {
+  .clientGrid a {
+    width: calc(12% - 5px);
+  }
+  
+  .clientGrid a:nth-of-type(2n) {
+    margin-right: 8px;
+  }
+  
+  .clientGrid a:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}
+.clientGrid a:hover img {
+  transform: scale(1);
+}
+.clientGrid figure {
+  margin: 0;
+}
+.clientGrid img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background: #ccc;
+  transition: transform .2s ease-in-out;
+  transform: scale(0.9);
+}
+
+.contactHeader{
+	text-align-last:justify;
+	font-size: 20px;
+	width:100%;
+}
