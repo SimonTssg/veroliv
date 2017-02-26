@@ -34,7 +34,7 @@ body{
 	height:100%;
 	position: fixed;
 	top:0px;
-	overflow: scroll;
+	overflow: auto;
 	width:100%;
 }
 h1{
@@ -61,11 +61,13 @@ h1{
 	line-height: 26.4px;
 	color:#6DC5A7;
 	text-shadow: 1.5px 1.5px grey;
+  margin: 0;
+  padding: 30px;
 }
 .puceMenu{
 	content: url("../asset/liste.gif");
-	width: auto; 
-	height: auto; 
+	width: auto;
+	height: auto;
 	margin: 0;
 	padding: 0;
 	margin-right:3px;
@@ -240,10 +242,10 @@ footer{
 }
 .view a.info:hover {
     box-shadow: 0 0 5px #000
-}.view-sixth img { 
-	transition: all 0.4s ease-in-out 0.5s; 
+}.view-sixth img {
+	transition: all 0.4s ease-in-out 0.5s;
 }
-.view-sixth .mask{ 
+.view-sixth .mask{
 	background-color: rgba(142, 137, 137, 0.5);
 	opacity:0;
 	transition: all 0.3s ease-in 0.4s;
@@ -256,35 +258,35 @@ footer{
     transform: scale(10);
     transition: all 0.3s ease-in-out 0.1s;
 }
-.view-sixth p { 
+.view-sixth p {
 	opacity:0;
     transform: scale(10);
 	transition: all 0.3s ease-in-out 0.2s;
 }
-.view-sixth a.info { 
+.view-sixth a.info {
 	opacity:0;
     transform: translateY(100px);
 	transition: all 0.3s ease-in-out 0.1s;
 }
 
-.view-sixth:hover .mask {  
-	opacity:1; 
+.view-sixth:hover .mask {
+	opacity:1;
 	transition-delay: 0s;
-}																			 
-.view-sixth:hover img { 
-	transition-delay: 0s; 
 }
-.view-sixth:hover h2 { 
+.view-sixth:hover img {
+	transition-delay: 0s;
+}
+.view-sixth:hover h2 {
 	opacity: 1;
     transform: scale(1);
 	transition-delay: 0.1s;
 }
-.view-sixth:hover p { 
-	opacity:1; 
+.view-sixth:hover p {
+	opacity:1;
     transform: scale(1);
 	transition-delay: 0.2s;
 }
-.view-sixth:hover a.info { 
+.view-sixth:hover a.info {
 	opacity:1;
     transform: translateY(0px);
 	transition-delay: 0.3s;
@@ -299,7 +301,7 @@ footer{
 	position:absolute;
 	z-index:1000;
 	width:20px;
-	height:20px;	
+	height:20px;
 	color:black;
 	cursor:pointer;
 	background-color:white;
@@ -351,14 +353,14 @@ footer{
 
 .ri-grid ul {
     zoom: 1; /* For IE 6/7 (trigger hasLayout) */
-} 
+}
 
 .ri-grid ul li {
 	-webkit-perspective: 400px;
 	-moz-perspective: 400px;
 	-o-perspective: 400px;
 	-ms-perspective: 400px;
-	perspective: 400px;	
+	perspective: 400px;
 	margin: 0;
 	padding: 0;
 	float: left;
@@ -471,11 +473,11 @@ footer{
   .clientGrid a {
     width: calc(12% - 5px);
   }
-  
+
   .clientGrid a:nth-of-type(2n) {
     margin-right: 8px;
   }
-  
+
   .clientGrid a:nth-of-type(4n) {
     margin-right: 0;
   }
