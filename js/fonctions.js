@@ -61,6 +61,11 @@ function initSite(){
 	$( window ).resize(function() {		
 		resizePrincipalContent();
 	});
+	
+	$(".lgi").on('click',function(e){
+		$("#collapseReal").collapse('toggle');
+	}
+	)
 
 }
 
@@ -152,11 +157,14 @@ function constructMenu(elts,type){
 		$('#view_'+ID).append("<div id='mask_"+ID+"' class='mask'></div>");
 		$('#mask_'+ID).append("<h2>"+elts[key][headers.indexOf("nom/expo")]+"</h2>");
 		$('#mask_'+ID).append("<p>"+elts[key][headers.indexOf("client")]+"</p>");
-		$('#mask_'+ID).append("<a href='#' id='info_"+ID+"' class='info'>Plus d'infos...</a>");
 		
-		$('#info_'+ID).on("click",function(evt){
-			loadContenuElt(evt,elts,type);
-		});
+		if (CONFIG.sansSousMenu.indexOf(type)==-1){ 
+			$('#mask_'+ID).append("<a href='#' id='info_"+ID+"' class='info'>Plus d'infos...</a>");
+			
+			$('#info_'+ID).on("click",function(evt){
+				loadContenuElt(evt,elts,type);
+			});
+		}
 	}
 	
 	console.log($('.grid'));
