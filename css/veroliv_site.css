@@ -64,6 +64,11 @@ h1{
 	margin: 0;
 	padding: 30px;
 }
+#mapid{
+    width: 90%;
+    height:70vh;
+    margin:auto;
+}
 .puceMenu{
 	content: url("../asset/liste.gif");
 	width: auto;
@@ -92,7 +97,11 @@ h1{
 }
 .list-group-item:hover{
 	cursor:pointer;
-	background-color:transparent;
+	background-color:transparent !important;
+}
+.list-group-item:focus{
+	cursor:pointer;
+	background-color:transparent !important;
 }
 .grid-item,
 .grid-sizer {

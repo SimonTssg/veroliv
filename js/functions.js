@@ -1,15 +1,6 @@
 var headers;
 var paramLines = [];
 
-$(function() {
-    $(".real").on("mouseover",function(e){
-		$(e.currentTarget).children('img').css('content', 'url("asset/listeHover.gif")')
-	});
-	$(".real").on("mouseout",function(e){
-		$(e.currentTarget).children('img').css('content', 'url("asset/liste.gif")')
-	});
-});
-
 
 function loadContenu(type){
 	// var doc = "html/"+html+".html";
@@ -40,17 +31,22 @@ function loadContenu(type){
 	
 }
 function initSite(){
+    
 	$(document).ready(function(){
-	   loadContenu('accueil');
+	   ;
    });
    
     $(document).ready(function() {
-    $.ajax({
-        type: "GET",
-        url: CONFIG.urlParam,
-        dataType: "text",
-        success: function(data) {processData(data);}
-     });
+        $.ajax({
+            type: "GET",
+            url: CONFIG.urlParam,
+            dataType: "text",
+            success: function(data) {
+                processData(data);
+                buildMenuFromConfig()        
+            }
+         });
+        loadContenu('accueil')       
 	});
 	
 	resizePrincipalContent();
@@ -59,10 +55,33 @@ function initSite(){
 	});
 	
 	$(".lgi").on('click',function(e){
-		$("#collapseReal").collapse('toggle');
-	}
+            $("#collapseReal").collapse('toggle');
+        }
 	)
 
+}
+
+
+function buildMenuFromConfig(){
+                      
+    $('#Realisation').after("<div id='collapseReal' class='panel-collapse collapse'></div>");
+    $('#collapseReal').append("<ul id='realListGroup' class='list-group'></ul>");
+    
+    var keyDescListe = Object.keys(CONFIG.descriptions);
+    
+    for (var keyDesc in keyDescListe){
+        var liHTML = "<li class='lgi list-group-item real' onclick='loadContenu(&#039"+keyDescListe[keyDesc]+"&#039;)'><img class='puceMenu'>"+CONFIG.descriptions[keyDescListe[keyDesc]]+"</li>"
+
+        if(CONFIG.descriptions[keyDescListe[keyDesc]]){$('#realListGroup').append(liHTML);}
+    }
+    
+    $(".real").on("mouseover",function(e){
+		$(e.currentTarget).children('img').css('content', 'url("asset/listeHover.gif")')
+	});
+	$(".real").on("mouseout",function(e){
+		$(e.currentTarget).children('img').css('content', 'url("asset/liste.gif")')
+	});
+        
 }
 
 function resizePrincipalContent(){
@@ -206,8 +225,8 @@ function loadContenuElt(evt,elts,type){
 	// $('.stamp').append("</div>");
 	
 	$('.stamp').append(lineEl[headers.indexOf("nom/expo")]+"</br>");
-	if(lineEl[headers.indexOf("Scéno/design")]){
-		$('.stamp').append(lineEl[headers.indexOf("Scéno/design")]+"</br>");
+	if(lineEl[headers.indexOf("Scê¯¯/design")]){
+		$('.stamp').append(lineEl[headers.indexOf("Scê¯¯/design")]+"</br>");
 	}
 	$('.stamp').append(lineEl[headers.indexOf("description")]+"</br>");
 	

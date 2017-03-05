@@ -16,10 +16,12 @@
 <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
 <script type="text/javascript" src="js/modernizr.custom.26633.js"></script>
 <script type="text/javascript" src="js/jquery.gridrotator.js"></script>
+<script type="text/javascript" src="js/leaflet.js"></script>
 <link href="http://db.onlinewebfonts.com/c/d6ad46001a481e292c57d2981ab4e615?family=Hasteristico" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="css/leaflet.css">
 <link rel="stylesheet" type="text/css" href="css/veroliv_site.css">
 <script src="CONFIG.js"></script>
-<script src="js/fonctions.js"></script>
+<script src="js/functions.js"></script>
 </head>
 <body onload=initSite()>
 <div id="SiteContent">
@@ -29,18 +31,7 @@
 			<a href="#" id="Accueil" onclick="loadContenu('accueil')" class="list-group-item menu">Accueil</a>
 			<a href="#" id="vide" class="list-group-item menu"></a>
 			<a href="#collapseReal" id="Realisation" data-toggle="collapse" class="list-group-item menu">Réalisations</a>
-				<div id="collapseReal" class="panel-collapse collapse">
-					<ul class="list-group">
-					  <li class="lgi list-group-item real" onclick="loadContenu('el_ex')"><img class="puceMenu">élément d'exposition</li>
-					  <li class="lgi list-group-item real"><img class="puceMenu">maquette</li>
-					  <li class="lgi list-group-item real"><img class="puceMenu">accessiblité, braille</li>
-					  <li class="lgi list-group-item real"><img class="puceMenu">mécanisme</li>
-					  <li class="lgi list-group-item real"><img class="puceMenu">accessoire, mode</li>
-					  <li class="lgi list-group-item real"><img class="puceMenu">sculpture</li>
-					  <li class="lgi list-group-item real"><img class="puceMenu">décor</li>
-					  <li class="lgi list-group-item real"><img class="puceMenu">autres productions</li>
-					</ul>
-				</div>
+				
 			<a href="#" class="list-group-item menu" onclick="loadContenu('clients')" >Clients</a>
 			<a href="#" class="list-group-item menu">L'atelier</a>
 			<a href="#" class="list-group-item menu">Partenaires</a>

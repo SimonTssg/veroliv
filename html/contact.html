@@ -2,4 +2,25 @@
 <div class="contactHeader">
 Olivier Taussig    5 rue de la Dhuis  75020 Paris</br>
 tél : 01 43 64 97 79     contact@atelierveroliv.fr
+
+<div id="mapid"></div>
+<script>
+	var mymap = new L.map('mapid',
+        {center:[48.867636, 2.405223], 
+         zoom:15
+        }
+    );
+    
+    L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+        maxZoom: 18, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy;<a href="https://carto.com/attribution">CARTO</a>'
+	}).addTo(mymap);
+    
+	L.marker([48.867636, 2.405223]).addTo(mymap)
+		.bindPopup("Atelier Veroliv<br/>5 rue de la Dhuis, 75020 PARIS<br/>Ouvrir dans Google Maps <a href='https://www.google.fr/maps/place/Atelier+Veroliv/@48.8676316,2.4052559,15z/data=!4m12!1m6!3m5!1s0x0:0x61b5866c43861aa2!2sAtelier+Veroliv!8m2!3d48.8676316!4d2.4052559!3m4!1s0x0:0x61b5866c43861aa2!8m2!3d48.8676316!4d2.4052559' target='_blank'>=></a>").openPopup();
+
+</script>
+
+
+
+</body>
 </div>
