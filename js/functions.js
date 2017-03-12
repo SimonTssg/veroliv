@@ -13,6 +13,12 @@ function loadContenu(type){
 				break;
 			case "el_ex":
 			case "ac_br":
+            case "maq":
+            case "mec":
+            case "ac_co":
+            case "scu":
+            case "dec":
+            case "div":
 				var el_ex_elt = filterByType(type,headers,paramLines);
 				constructMenu(el_ex_elt,type);
 								
@@ -54,10 +60,7 @@ function initSite(){
 		resizePrincipalContent();
 	});
 	
-	$(".lgi").on('click',function(e){
-            $("#collapseReal").collapse('toggle');
-        }
-	)
+	
 
 }
 
@@ -81,6 +84,11 @@ function buildMenuFromConfig(){
 	$(".real").on("mouseout",function(e){
 		$(e.currentTarget).children('img').css('content', 'url("asset/liste.gif")')
 	});
+    
+    $(".lgi").on('click',function(e){
+            $("#collapseReal").collapse('toggle');
+        }
+	)
         
 }
 
@@ -163,26 +171,39 @@ function constructMenu(elts,type){
 			
 	$('#ContenuPrincipal').append("<div class='grid'></div>");
 	$('.grid').append("<div class='grid-sizer'></div>");
-	
-	for (var key in elts){
-		var ID = elts[key][headers.indexOf("nomCourt")];
+    
+    if (CONFIG.sansSousMenu.indexOf(type)>-1){ 		
+        createCarousel();
+    }
+    var cg = 0
+	elts.forEach(function(elt){
+
+		var ID = elt[headers.indexOf("nomCourt")];
+        var urlPhoto = "asset/"+elt[headers.indexOf("type")]+"/"+elt[headers.indexOf("photoP")];
+        var idInfo = "info_"+ID+"_"+String(cg);
 		$('.grid').append("<div class='grid-item' id='grid_"+ID+"'></div>");
 		$('#grid_'+ID).append("<div id='view_"+ID+"' class='view view-sixth'></div>");
-		$('#view_'+ID).append("<img src=asset/"+elts[key][headers.indexOf("type")]+"/"+elts[key][headers.indexOf("photoP")]+" />");
+		$('#view_'+ID).append("<img src="+urlPhoto+" />");
 		$('#view_'+ID).append("<div id='mask_"+ID+"' class='mask'></div>");
-		$('#mask_'+ID).append("<h2>"+elts[key][headers.indexOf("nom/expo")]+"</h2>");
-		$('#mask_'+ID).append("<p>"+elts[key][headers.indexOf("client")]+"</p>");
+		$('#mask_'+ID).append("<h2>"+elt[headers.indexOf("nom/expo")]+"</h2>");
+		$('#mask_'+ID).append("<p>"+elt[headers.indexOf("client")]+"</p>");
+        $('#mask_'+ID).append("<a href='#' id='"+idInfo+"' class='info'>Plus d'infos...</a>");
 		
-		if (CONFIG.sansSousMenu.indexOf(type)==-1){ 
-			$('#mask_'+ID).append("<a href='#' id='info_"+ID+"' class='info'>Plus d'infos...</a>");
+		if (CONFIG.sansSousMenu.indexOf(type)==-1){ 		
 			
-			$('#info_'+ID).on("click",function(evt){
+			$('#'+idInfo).on("click",function(evt){
 				loadContenuElt(evt,elts,type);
 			});
-		}
-	}
+		}else{
+            $('.carousel-inner').append("<div class='item'><img src='"+urlPhoto+"' ></div>");
+            $('#'+idInfo).on("click",function(evt){
+                openSlider(evt);
+			});
+            
+        }
+        cg++;
+	});
 	
-	console.log($('.grid'));
 	var $grid = $('.grid').masonry({
 	  // options
 	  itemSelector: '.grid-item',
@@ -225,26 +246,12 @@ function loadContenuElt(evt,elts,type){
 	// $('.stamp').append("</div>");
 	
 	$('.stamp').append(lineEl[headers.indexOf("nom/expo")]+"</br>");
-	if(lineEl[headers.indexOf("Sc꯯/design")]){
-		$('.stamp').append(lineEl[headers.indexOf("Sc꯯/design")]+"</br>");
+	if(lineEl[headers.indexOf("Scéno/design")]){
+		$('.stamp').append(lineEl[headers.indexOf("Scéno/design")]+"</br>");
 	}
 	$('.stamp').append(lineEl[headers.indexOf("description")]+"</br>");
 	
-	$('#ContenuPrincipal').append("<div id='mySlider' class='carousel slide'></div>");
-	$('#mySlider').append("<div class='carousel-inner' role='listbox'></div>");
-	
-	var leftChevron = '<a class="left carousel-control" href="#mySlider" role="button" data-slide="prev">';
-    leftChevron += '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>';
-    leftChevron += '<span class="sr-only">Previous</span></a>';
-	
-	var rghtChevron = '<a class="right carousel-control" href="#mySlider" role="button" data-slide="next">';
-    rghtChevron += '<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>';
-    rghtChevron += '<span class="sr-only">Next</span></a>';
- 
-	$('#mySlider').append(leftChevron);
-	$('#mySlider').append(rghtChevron);
-	
-	$('#mySlider').append("<div id='closeBtn' onclick='closeCarousel()'>X</div>");
+	createCarousel();
 	
 	var fileextension = CONFIG.imagesExt;
 	var urlDIR = CONFIG.imagesDIR+lineEl[headers.indexOf("type")]+"/"+lineEl[headers.indexOf("dosPhoto")]+"/";
@@ -295,6 +302,7 @@ function loadContenuElt(evt,elts,type){
 }
 function openSlider(e){
 		var idSrc = e.currentTarget.id;
+        
 		var d = idSrc.split("_");
 		var nb = d[d.length -1];
 		$("#mySlider").css("display","block");
@@ -302,9 +310,43 @@ function openSlider(e){
 		var items = $(".carousel-inner").children();
 		$(items[nb]).addClass( "active" );
 		$("#closeBtn").css("display","block");
+        $( document ).on("keydown",function(evt) {
+            evt = evt || window.event;
+            var isEscape = false;
+            if ("key" in evt) {
+                isEscape = (evt.key == "Escape" || evt.key == "Esc");
+            } else {
+                isEscape = (evt.keyCode == 27);
+            }
+            if (isEscape) {
+                console.log('escape');
+                closeCarousel();
+                $( document ).off("keydown");
+            }
+        });
 	}
+
+function createCarousel(){
+    
+    $('#ContenuPrincipal').append("<div id='mySlider' class='carousel slide'></div>");
+	$('#mySlider').append("<div class='carousel-inner' role='listbox'></div>");
+	
+	var leftChevron = '<a class="left carousel-control" href="#mySlider" role="button" data-slide="prev">';
+    leftChevron += '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>';
+    leftChevron += '<span class="sr-only">Previous</span></a>';
+	
+	var rghtChevron = '<a class="right carousel-control" href="#mySlider" role="button" data-slide="next">';
+    rghtChevron += '<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>';
+    rghtChevron += '<span class="sr-only">Next</span></a>';
+ 
+	$('#mySlider').append(leftChevron);
+	$('#mySlider').append(rghtChevron);
+	
+	$('#mySlider').append("<div id='closeBtn' onclick='closeCarousel()'>X</div>");
+}
 
 function closeCarousel(){
 	$("#mySlider").css("display","none");
 	$("#closeBtn").css("display","none");
+    $(".carousel-inner > .item").removeClass( "active" );
 }

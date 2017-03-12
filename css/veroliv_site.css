@@ -68,6 +68,8 @@ h1{
     width: 90%;
     height:70vh;
     margin:auto;
+    border: 1px solid grey;
+    border-radius: 5px;
 }
 .puceMenu{
 	content: url("../asset/liste.gif");
@@ -109,7 +111,7 @@ h1{
 }
 .grid-sizer-elx,
 .grid-item-elx{
-  width: 220px;
+  width: 260px;
 }
 
 .grid-item{
@@ -118,7 +120,7 @@ h1{
 
 .grid-item-elx {
   float: left;
-  margin: 10px;
+  margin: 5px;
 }
 
 .grid-item img, .grid-item-elx img{
@@ -161,16 +163,16 @@ h1{
 .InfoElEx{
 	margin: 10px;
 	position:absolute;
-	right: 10%;
+	right: 15%;
     top: 5px;
 	text-align:right;
-	width:40%;
+	width:30%;
 	font-family: "Hasteristico";
 	font-weight: bold;
-	font-size: 17px;
+	font-size: 19px;
 }
 .ElExInfoHeader{
-	font-size: 20px;
+	font-size: 22px;
 }
 #mySlider{
 	top:0;
