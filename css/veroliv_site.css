@@ -66,7 +66,7 @@ h1{
 }
 #mapid{
     width: 90%;
-    height:70vh;
+    height:65vh;
     margin:auto;
     border: 1px solid grey;
     border-radius: 5px;
@@ -510,7 +510,21 @@ footer{
 }
 
 .contactHeader{
-	text-align-last:justify;
-	font-size: 20px;
+	font-size: 30px;
 	width:100%;
+}
+.contactTable{
+    width:100%;
+}
+.tcl{
+    text-align: left;
+    padding:0 0 0 20px;
+    
+}
+.tcc{
+    text-align: center;
+}
+.tcr{
+    text-align: right;
+    padding:0 20px 0 0;
 }
